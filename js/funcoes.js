@@ -90,7 +90,7 @@ function listarEstoque() {
                 document.write("<ul>");
                 document.write("<li>Nome do produto: "+produto.nome+"</li>");
                 document.write("<li>Código do produto: "+produto.codigo+"</li>");
-                document.write("<li>Detalhes do produto: "+produto.det+"</li>");
+                document.write("<li>Detalhes do produto: "+produto.detalhes+"</li>");
                 document.write("<li>Quantidade no estoque: "+produto.quantidade+"</li>");
                 document.write("</ul>");
             });
