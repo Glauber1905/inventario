@@ -52,17 +52,23 @@
                     </select>
                 </td>
             </tr>
+            <!--Procedentes-->
+            <tr>
+                <td class="alinharRotulos">Procedentes:</td>
+                <td><input id="txtProcProduto" type="text"></td>
+            </tr>
             <!--Botoes-->
             <tr>
                 <td colspan="2" aling="center">
-                    <input type="button" value="Cadastrar" class="alinhaBtns" onclick="validarProduto('txtNomeProduto','txtCodProduto','txtDetProduto','qtidadeProduto')">
+                    <button value="Cadastrar" class="alinhaBtns" onclick="validarProduto('txtNomeProduto','txtCodProduto','txtDetProduto','qtidadeProduto','txtProcProduto')">cadastrar</button>
+                    <input type="button" value="Cadastrar" class="alinhaBtns" onclick="validarProduto('txtNomeProduto','txtCodProduto','txtDetProduto','qtidadeProduto','txtProcProduto')">
                     <input type="button" value="Inventário" class="alinhaBtns" onclick="window.open('verEstoque.html','_self')">
                     <input type="reset" value="Limpar" class="alinhaBtns">
-                    <input type="button" value="Ver Notas" class="alinhaBtns" onclick="window.open">
+                    <button value="Ver Notas" class="alinhaBtns" onclick="window.open" ><a href="https://www.google.com.br/" class="none" target="_blank">Ver notas </a> </button>
                 </td>
             </tr>
         </table>
     </form>
 </body>
 
-</html>
+</html> 

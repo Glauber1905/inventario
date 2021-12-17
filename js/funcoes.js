@@ -9,17 +9,18 @@
 // sucesso (todas as informações preenchidas), chama a função cadastrarProduto(...)
 // Retorno: nenhum
 //-----------------------------------------------------------------------------------------------------------
-function validarProduto(idNomeProduto, idCodProduto, idDetalProduto, idQtidadeProduto) {
+function validarProduto(idNomeProduto, idCodProduto, idDetalProduto, idQtidadeProduto, idProcProduto) {
     let nome = document.getElementById(idNomeProduto).value;
     let codigo = document.getElementById(idCodProduto).value;
     let det = document.getElementById(idDetalProduto).value;
     let qtidade = document.getElementById(idQtidadeProduto).value;
+    let proc = document.getElementById(idProcProduto).value;
 
     if (nome == "")
         alert("Nome do produto não pode estar em branco. Favor preenchê-lo!");
     else if (codigo == "")
         alert("Código do produto não pode estar em branco. Favor preenchê-lo!");
-    else cadastrarProduto(nome, codigo, det, parseInt(qtidade));
+    else cadastrarProduto(nome, codigo, det, parseInt(qtidade), proc);
 }
 //-----------------------------------------------------------------------------------------------------------
 // Função: cadastrarProduto(produto, codig, qtidade)
@@ -32,8 +33,8 @@ function validarProduto(idNomeProduto, idCodProduto, idDetalProduto, idQtidadePr
 // a função atualizarTotalEstoque()
 // Retorno: nenhum
 //-----------------------------------------------------------------------------------------------------------
-function cadastrarProduto(produto, codig, detalhe, qtidade) {
-    let novoProduto = {nome:produto, codigo:codig, detalhes:detalhe, quantidade:qtidade};
+function cadastrarProduto(produto, codig, detalhe, qtidade, proce) {
+    let novoProduto = {nome:produto, codigo:codig, detalhes:detalhe, quantidade:qtidade, procede:proce};
 
     if (typeof(Storage) !== "undefined") {
         let produtos = localStorage.getItem("produtos");
@@ -92,6 +93,7 @@ function listarEstoque() {
                 document.write("<li>Código do produto: "+produto.codigo+"</li>");
                 document.write("<li>Detalhes do produto: "+produto.detalhes+"</li>");
                 document.write("<li>Quantidade no estoque: "+produto.quantidade+"</li>");
+                document.write("<li>Procedente: "+produto.procede+"</li>");
                 document.write("</ul>");
             });
         }
