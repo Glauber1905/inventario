@@ -82,7 +82,7 @@ function carregarTotalEstoque(idCampo) {
 function listarEstoque() {
     if (typeof(Storage) !== "undefined") {
         let produtos = localStorage.getItem("produtos");
-        document.write("<h1>Estoque:</h1>")
+        document.write("<h1>Iventário:</h1>")
         if (produtos == null)
             document.write("<h3>Ainda não há nenhum item no estoque</h3>");
         else {
